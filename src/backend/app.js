@@ -36,7 +36,7 @@ app.get("/future-meals", async (req, res) => {
     res.send(result); // an array of objects
   } catch (error) {
     console.error(error.message);
-    res.send("Something went wrong");
+    res.status(500).send("Internal Server Error");
   }
 });
 
@@ -50,7 +50,7 @@ app.get("/past-meals", async (req, res) => {
     res.send(result); // an array of objects
   } catch (error) {
     console.error(error.message);
-    res.send("Something went wrong");
+    res.status(500).send("Internal Server Error");
   }
 });
 
@@ -64,7 +64,7 @@ app.get("/all-meals", async (req, res) => {
     res.send(result); // an array of objects
   } catch (error) {
     console.error(error.message);
-    res.send("Something went wrong");
+    res.status(500).send("Internal Server Error");
   }
 });
 
