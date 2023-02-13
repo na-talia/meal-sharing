@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const knex = require("../database");
 
-// GET - Returns all reservations
+// GET - Returns all reservations http://localhost:3000/api/reservations
 
 router.get("/", async (req, res) => {
   try {
@@ -70,10 +70,10 @@ router.put("/:id", async (req, res) => {
         .status(404)
         .send(`The reservation with ID ${req.params.id} is not found`);
     } else {
+      await knex("reservation").where({ id: req.params.id }).update(req.body);
       const updatedReservation = await knex("reservation").where({
         id: req.params.id,
       });
-      await knex("reservation").where({ id: req.params.id }).update(req.body);
       res.send(updatedReservation);
     }
   } catch (error) {

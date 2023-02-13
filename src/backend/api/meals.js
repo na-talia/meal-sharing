@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const knex = require("../database");
 
-// GET - Returns all meals
+// GET - Returns all meals http://localhost:3000/api/meals
 
 router.get("/", async (req, res) => {
   try {
@@ -64,8 +64,8 @@ router.put("/:id", async (req, res) => {
     if (mealById.length === 0) {
       res.status(404).send(`The meal with ID ${req.params.id} is not found`);
     } else {
-      const updatedMeal = await knex("meal").where({ id: req.params.id });
       await knex("meal").where({ id: req.params.id }).update(req.body);
+      const updatedMeal = await knex("meal").where({ id: req.params.id });
       res.send(updatedMeal);
     }
   } catch (error) {
