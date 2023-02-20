@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const knex = require("../database");
 
-
 router.get("/", async (req, res) => {
   let selectedMeals = knex.select("meal.*").from("meal");
 
@@ -64,14 +63,10 @@ router.get("/", async (req, res) => {
 
   const sortedByKey = req.query.sortKey;
   const sortedByDirection = req.query.sortDir;
-  if (
-    sortedByKey === "when" ||
-    sortedByKey === "max_reservations" ||
-    sortedByKey === "price"
-  ) {
-    if (sortedByDirection === "asc" || sortedByDirection === "desc")
+  if (["when", "max_reservavtions", "price"].includes(sortedByKey)) {
+    if (sortedByDirection === "asc" || sortedByDirection === "desc") {
       selectedMeals.orderBy(sortedByKey, sortedByDirection);
-    else {
+    } else {
       selectedMeals.orderBy(sortedByKey);
     }
   }
@@ -107,6 +102,8 @@ router.get("/:meal_id/reviews", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "Internal server error" });
     throw Error;
+  }
+});
 
 // GET - Returns all meals http://localhost:3000/api/meals
 
