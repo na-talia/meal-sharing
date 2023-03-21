@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import RingLoader from "react-spinners/RingLoader"; //npm install --save react-spinners
-import MealsCSS from "./meals.module.css";
+import MealsCSS from "./UI/meals.module.css";
+import Meal from "./Meal";
 
 const MealList = () => {
   const [listOfMeals, setListOfMeals] = useState([]);
@@ -26,11 +27,9 @@ const MealList = () => {
     <div className={MealsCSS.list}>
       {listOfMeals.map((meal) => {
         return (
-          <ul key={meal.id}>
-            <h3>{meal.title}</h3>
-            <li>{meal.description}</li>
-            <li>Price: {meal.price}</li>
-          </ul>
+          <div>
+            <Meal key={meal.id} meal={meal} />
+          </div>
         );
       })}
     </div>
@@ -44,6 +43,7 @@ const MealList = () => {
         <RingLoader
           className={MealsCSS.spinner}
           loading={loading}
+          color="#ffff"
           aria-label="Loading Spinner"
           data-testid="loader"
         />
