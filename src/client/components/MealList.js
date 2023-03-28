@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import RingLoader from "react-spinners/RingLoader"; //npm install --save react-spinners
 import MealsCSS from "./UI/meals.module.css";
+import MainCSS from "./UI/main.module.css";
 import Meal from "./Meal";
 
 const MealList = () => {
@@ -26,11 +27,7 @@ const MealList = () => {
   const renderMeal = listOfMeals ? (
     <div className={MealsCSS.list}>
       {listOfMeals.map((meal) => {
-        return (
-          <div>
-            <Meal key={meal.id} meal={meal} />
-          </div>
-        );
+        return <Meal key={meal.id} meal={meal} />;
       })}
     </div>
   ) : (
@@ -48,7 +45,10 @@ const MealList = () => {
           data-testid="loader"
         />
       ) : (
-        <div>{renderMeal}</div>
+        <div>
+          <h1 className={MainCSS.title}>ALL MEALS</h1>
+          <div>{renderMeal}</div>
+        </div>
       )}
     </div>
   );
