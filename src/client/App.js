@@ -2,23 +2,32 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import TestComponent from "./components/TestComponent/TestComponent";
 import MealList from "./components/MealList";
-import Title from "./components/Title";
 import NavBar from "./components/NavBar";
+import MealDetails from "./components/MealDetails";
+import HomePage from "./components/HomePage";
+import Footer from "./components/Footer";
+import About from "./components/About";
 
 function App() {
   return (
     <Router>
+      <NavBar />
       <Route exact path="/">
-        <NavBar />
-        <Title title="Meal Sharing" />
+        <HomePage />
+      </Route>
+      <Route exact path="/meals">
         <MealList />
       </Route>
-      <Route exact path="/lol">
-        <p>lol</p>
+      <Route exact path="/meals/:mealId">
+        <MealDetails />
+      </Route>
+      <Route exact path="/about">
+        <About />
       </Route>
       <Route exact path="/test-component">
         <TestComponent></TestComponent>
       </Route>
+      <Footer />
     </Router>
   );
 }
