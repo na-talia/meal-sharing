@@ -1,0 +1,56 @@
+.navbar {
+  margin-top: 1rem;
+  padding: 1rem;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  text-transform: uppercase;
+  color: #ffff;
+  text-align: center;
+  font-size: 40px;
+}
+
+.subtitle {
+  padding: 2rem;
+  text-align: start;
+  padding: 2rem 2rem 0 2rem;
+  font-size: 20px;
+}
+
+.border {
+  background-color: #ffff;
+  margin: 1rem;
+}
+
+.calltoAction {
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.search {
+  color: #f06e16;
+}
+
+.showAll {
+  background-color: #f06e16;
+  border: 3px solid #f06e16;
+  margin-left: 45%;
+  text-transform: uppercase;
+}
+
+.footer {
+  color: #ffff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2rem;
+}
+
+.about {
+  color: #ffff;
+  text-align: center;
+}

@@ -7,8 +7,8 @@
 }
 
 #root {
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
   height: 100vh;
 }
 
@@ -40,7 +40,7 @@ button {
   color: rgb(255, 255, 255);
   margin-top: 10px;
   padding: 10px;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 button:hover {
