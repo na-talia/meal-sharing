@@ -107,7 +107,6 @@ app.get("/last-meal", async (req, res) => {
   }
 });
 
-
 if (process.env.API_PATH) {
   app.use(process.env.API_PATH, router);
 } else {
