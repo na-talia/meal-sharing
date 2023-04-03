@@ -1,0 +1,173 @@
+.navbar {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-top: -1.5rem;
+}
+
+.logo:hover {
+  color: #f06e16;
+}
+
+.logoImg {
+  width: 3rem;
+  margin-bottom: -0.3rem;
+  margin-left: -0.5rem;
+}
+
+.title {
+  text-transform: uppercase;
+  color: #ffff;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 3rem;
+}
+
+.subtitle {
+  text-align: start;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding: 3rem 2rem 0 2rem;
+  font-size: 20px;
+}
+
+.border {
+  background-color: #ffff;
+  margin: 1rem;
+  -webkit-box-shadow: 2px 3px 73px 8px rgba(255, 255, 255, 0.62);
+  -moz-box-shadow: 2px 3px 73px 8px rgba(255, 255, 255, 0.62);
+  box-shadow: 2px 3px 73px 8px rgba(255, 255, 255, 0.62);
+}
+
+.calltoAction {
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.search {
+  color: #f06e16;
+}
+
+.showAll {
+  background-color: #f06e16;
+  border: 3px solid #f06e16;
+  margin-left: 43%;
+  text-transform: uppercase;
+  opacity: 100%;
+  margin-top: 2rem;
+}
+
+.footer {
+  color: #ffff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2rem;
+}
+
+.about {
+  color: #ffff;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 40%;
+}
+
+.reviewBlock {
+  border: 0.1rem #ffff solid;
+  background-color: #134e5e;
+  opacity: 80%;
+  color: #ffff;
+  margin: 1rem;
+  padding: 1rem;
+  list-style-type: none;
+}
+
+.noReviews {
+  color: #ffff;
+  text-align: center;
+  margin: 2rem;
+  font-weight: 700;
+}
+
+.whiteBorder {
+  background-color: #ffff;
+  margin: 2rem;
+  padding: 2rem;
+  -webkit-box-shadow: 2px 3px 73px 8px rgba(255, 255, 255, 0.62);
+  -moz-box-shadow: 2px 3px 73px 8px rgba(255, 255, 255, 0.62);
+  box-shadow: 2px 3px 73px 8px rgba(255, 255, 255, 0.62);
+}
+
+.reviewTitle {
+  text-align: center;
+}
+
+.liHover {
+  border: solid hidden;
+  padding: 0.5rem;
+}
+
+.liHover:hover {
+  border: #ffff;
+  background-color: #ffff;
+  color: #134e5e;
+  padding: 0.5rem;
+}
+
+.pizzaImg {
+  position: relative;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.hungry {
+  position: absolute;
+  top: 42rem;
+  left: 19rem;
+}
+
+.hungry > span {
+  color: #f06e16;
+  font-size: 5rem;
+}
+
+.hungry > p {
+  font-size: 2rem;
+}
+
+.rating {
+  font-weight: 800;
+  background-color: #ffff;
+  color: #f06e16;
+  margin: 0.3rem;
+  padding: 0.2rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .hungry {
+    position: relative;
+    left: 3rem;
+    top: -7rem;
+  }
+
+  .hungry > span {
+    font-size: 2rem;
+  }
+
+  .hungry > p {
+    font-size: 1rem;
+  }
+
+  .calltoAction {
+    padding-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 800;
+    margin-top: -4rem;
+  }
+}

@@ -7,27 +7,32 @@ body {
   );
 }
 
-.title {
-  text-transform: uppercase;
-  color: #ffff;
-  text-align: center;
+.spinner {
+  margin-left: 45%;
+  margin-top: 15%;
+  margin-bottom: 30%;
 }
 
-.spinner {
-  margin: 50%;
+.limitList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: #dc8644;
+  margin: 1rem;
 }
 
 .list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   background-color: #dc8644;
   padding: 2rem;
+  margin: 2rem;
 }
 
 .border,
 .list,
-.mealList {
-  margin: 2rem;
+.mealList,
+.detailsBlock,
+.container {
   -webkit-box-shadow: 2px 3px 73px 8px rgba(255, 255, 255, 0.62);
   -moz-box-shadow: 2px 3px 73px 8px rgba(255, 255, 255, 0.62);
   box-shadow: 2px 3px 73px 8px rgba(255, 255, 255, 0.62);
@@ -35,28 +40,41 @@ body {
 
 .mealTitle {
   color: #f06e16;
+  text-transform: uppercase;
+  font-size: 23px;
+}
+
+.listDetails {
+  background-color: #dc8644;
+  padding: 2rem;
 }
 
 ul {
   text-align: start;
   justify-items: baseline;
   background-color: #ffff;
-  margin: 2rem 0 0 0;
-  padding: 2rem;
+  padding: 1rem;
+  height: 90%;
 }
 
 li {
-  padding-top: 0.5rem;
+  padding-top: 0.3rem;
+}
+
+.price,
+.noAvailableMeals {
+  color: #134e5e;
+  font-weight: 700;
 }
 
 .price {
-  color: #f06e16;
-  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .mealList {
   margin: 1rem;
-  height: auto;
+  font-size: 17px;
+  font-weight: 800;
 }
 
 .mealId {
@@ -66,4 +84,83 @@ li {
   border-radius: 50%;
   padding: 0.5rem;
   font-size: 15px;
+}
+
+.buttons,
+.container {
+  margin: 2rem;
+}
+
+.noAvailableMeals {
+  background-color: #ffff;
+  padding: 0.5rem;
+  border: 3px #134e5e solid;
+}
+
+.availableLeft {
+  color: #f06e16;
+}
+
+.noMealFound {
+  text-align: center;
+  color: #ffff;
+  padding: 5rem;
+  margin-bottom: 25%;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.2rem #ffff solid;
+  border-top: 0.2rem #ffff solid;
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.input {
+  margin-left: 2rem;
+  width: 20rem;
+  border: 0.2rem #dc8644 solid;
+}
+
+.input:focus {
+  background-color: #f06e16;
+  color: #ffff;
+  font-weight: 700;
+}
+
+.input:focus::placeholder {
+  color: #ffff;
+}
+
+.select {
+  margin-right: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  height: 2rem;
+  border: 0.2rem #dc8644 solid;
+}
+
+.detailsBlock {
+  display: flex;
+  margin: 2rem;
+}
+
+.pizzaImgSmall {
+  width: 40%;
+  height: auto;
+}
+
+@media screen and (max-width: 1400px) {
+  .limitList,
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 15px;
+  }
+
+  .detailsBlock {
+    display: grid;
+    background-color: #ffff;
+  }
 }
