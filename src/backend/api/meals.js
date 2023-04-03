@@ -63,7 +63,7 @@ router.get("/", async (req, res) => {
 
   const sortedByKey = req.query.sortKey;
   const sortedByDirection = req.query.sortDir;
-  if (["when", "max_reservavtions", "price"].includes(sortedByKey)) {
+  if (["when", "max_reservations", "price"].includes(sortedByKey)) {
     if (sortedByDirection === "asc" || sortedByDirection === "desc") {
       selectedMeals.orderBy(sortedByKey, sortedByDirection);
     } else {
@@ -80,7 +80,6 @@ router.get("/", async (req, res) => {
     }
   } catch (error) {
     res.status(500).json({ error: "Internal Server error" });
-    throw Error;
   }
 });
 
@@ -101,7 +100,33 @@ router.get("/:meal_id/reviews", async (req, res) => {
     }
   } catch (error) {
     res.status(500).json({ error: "Internal server error" });
-    throw Error;
+  }
+});
+
+/// Returns all reservations for a specific meal
+
+router.get("/:meal_id/reservation", async (req, res) => {
+  const query = knex
+    .select(
+      "meal.*",
+      knex.raw(
+        "COALESCE(SUM(reservation.number_of_guests), 0) as sum_of_guests"
+      )
+    )
+    .from("meal")
+    .innerJoin("reservation", "reservation.meal_id", "=", "meal.id")
+    .having("meal.id", "=", req.params.meal_id)
+    .groupBy("meal.id", "meal.title");
+
+  try {
+    const findReservations = await query;
+    if (findReservations.length) {
+      res.json(findReservations);
+    } else {
+      res.status(404).send("No reservatons found");
+    }
+  } catch (error) {
+    res.status(500).json({ error: "Internal server error" });
   }
 });
 
