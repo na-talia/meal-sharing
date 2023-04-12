@@ -5,7 +5,7 @@ import MealsCSS from "./UI/meals.module.css";
 import MainCSS from "./UI/main.module.css";
 import { Link } from "react-router-dom";
 
-const MealLimit = () => {
+const MainPage = () => {
   const [limit, setLimit] = useState([]);
 
   useEffect(() => {
@@ -36,4 +36,4 @@ const MealLimit = () => {
   );
 };
 
-export default MealLimit;
+export default MainPage;
