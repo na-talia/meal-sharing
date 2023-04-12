@@ -91,6 +91,7 @@ const ReviewForm = () => {
               />
             </div>
           </div>
+
           <label>Rating from 1 to 5: </label>
           <input
             type="number"

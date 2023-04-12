@@ -15,6 +15,7 @@ const MealDetails = () => {
   const { mealId } = useParams();
 
   useEffect(() => {
+
     (async () => {
       const data = await fetch(`api/meals/${mealId}`).then((response) =>
         response.json()
@@ -55,6 +56,7 @@ const MealDetails = () => {
   ) ? (
     <ReservationForm />
   ) : (
+
     <button className={MealsCSS.noAvailableMeals} disabled>
       There are no available meals left...
     </button>

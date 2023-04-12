@@ -21,6 +21,7 @@ const Title = ({ title }) => {
             <p>It's time to eat!</p>
           </div>
         </div>
+        
         <p className={TitleCSS.calltoAction}>
           WHAT PIZZA DO YOU WANT TODAY?
           <span className={TitleCSS.search}> LET'S SEARCH!</span>

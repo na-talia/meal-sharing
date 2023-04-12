@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import NavbarCSS from "./UI/main.module.css";
 import logo from "./UI/pizza-icon.png";
 
+
 const NavBar = () => {
   return (
     <div className={NavbarCSS.navbar}>

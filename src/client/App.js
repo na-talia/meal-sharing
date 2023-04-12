@@ -4,7 +4,7 @@ import TestComponent from "./components/TestComponent/TestComponent";
 import MealList from "./components/MealList";
 import NavBar from "./components/NavBar";
 import MealDetails from "./components/MealDetails";
-import HomePage from "./components/HomePage";
+import MainPage from "./components/MainPage";
 import Footer from "./components/Footer";
 import About from "./components/About";
 
@@ -13,7 +13,7 @@ function App() {
     <Router>
       <NavBar />
       <Route exact path="/">
-        <HomePage />
+        <MainPage />
       </Route>
       <Route exact path="/meals">
         <MealList />
