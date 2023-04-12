@@ -32,7 +32,6 @@ const ReservationForm = () => {
       body: JSON.stringify(data),
     })
       .then(() => {
-        console.log(data);
         setContactName("");
         setPhoneNumber("");
         setEmail("");
@@ -73,26 +72,30 @@ const ReservationForm = () => {
             {idOfMeal}
           </span>
           <div>
-            <label>Contact name:</label>
-            <input
-              type="text"
-              placeholder="Name"
-              value={contactName}
-              onChange={(e) => setContactName(e.target.value)}
-              required
-            />
-            <label>Phone number:</label>
-            <input
-              type="tel"
-              placeholder="— —  — —  — —  — —"
-              value={phoneNumber}
-              onChange={(e) => setPhoneNumber(e.target.value)}
-              className={ReservationCSS.phone}
-              required
-            />
+            <span className={ReservationCSS.contactName}>
+              <label>Contact name: </label>
+              <input
+                type="text"
+                placeholder="Name"
+                value={contactName}
+                onChange={(e) => setContactName(e.target.value)}
+                required
+              />
+            </span>
+            <span className={ReservationCSS.phone}>
+              <label>Phone number: </label>
+              <input
+                type="tel"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                required
+              />
+            </span>
           </div>
           <div>
-            <label>Email:</label>
+            <span className={ReservationCSS.email}>
+              <label>Email: </label>
+            </span>
             <input
               type="email"
               placeholder="email@email.com"
@@ -100,15 +103,16 @@ const ReservationForm = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
-            <label>Number of guests:</label>
-            <input
-              type="number"
-              min={1}
-              value={numberOfGuests}
-              onChange={(e) => setNumberOfGuests(e.target.value)}
-              className={ReservationCSS.guests}
-              required
-            />
+            <span className={ReservationCSS.guests}>
+              <label>Number of guests: </label>
+              <input
+                type="number"
+                min={1}
+                value={numberOfGuests}
+                onChange={(e) => setNumberOfGuests(e.target.value)}
+                required
+              />
+            </span>
           </div>
           <button type="submit">Make a reservation</button>
         </form>

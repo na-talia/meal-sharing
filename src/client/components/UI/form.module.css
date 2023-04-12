@@ -1,20 +1,28 @@
 form {
-  margin-right: 2rem;
   margin-top: 1rem;
   background-color: #ffff;
   padding: 2rem;
 }
 
+.description {
+  margin-top: 1rem;
+}
+
 input {
-  margin: 1rem;
   padding: 0.2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.inputTitle {
+  width: 95%;
 }
 
 textarea {
   margin-top: 1rem;
   width: 100%;
   height: 5rem;
-  padding: 0.6rem;
+  padding: 0.5rem;
 }
 
 .mealId {
@@ -22,10 +30,27 @@ textarea {
   color: #f06e16;
 }
 
+.contactName {
+  padding-right: 1rem;
+}
+
 .phone {
-  text-align: center;
+  padding-left: 1rem;
+}
+
+.contactName > input,
+.phone > input {
+  width: 33%;
+}
+
+.email {
+  padding-right: 4.5rem;
 }
 
 .guests {
+  padding-left: 11rem;
+}
+
+.guests > input {
   width: 5%;
 }

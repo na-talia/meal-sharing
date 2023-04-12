@@ -73,21 +73,13 @@ const ReviewForm = () => {
             <input
               type="text"
               placeholder="Title"
+              className={ReviewCSS.inputTitle}
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               required
             />
-            <label>Rating from 1 to 5: </label>
-            <input
-              type="number"
-              min={1}
-              max={5}
-              value={stars}
-              onChange={(e) => setStars(e.target.value)}
-              required
-            />
           </div>
-          <div>
+          <div className={ReviewCSS.description}>
             <label>Description: </label>
             <div>
               <textarea
@@ -99,6 +91,16 @@ const ReviewForm = () => {
               />
             </div>
           </div>
+
+          <label>Rating from 1 to 5: </label>
+          <input
+            type="number"
+            min={1}
+            max={5}
+            value={stars}
+            onChange={(e) => setStars(e.target.value)}
+            required
+          />
           <div>
             <button type="submit">Send a review</button>
           </div>
