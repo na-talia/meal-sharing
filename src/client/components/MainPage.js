@@ -4,9 +4,20 @@ import Title from "./Title";
 import MealsCSS from "./UI/meals.module.css";
 import MainCSS from "./UI/main.module.css";
 import { Link } from "react-router-dom";
+import RingLoader from "react-spinners/RingLoader"; //npm install --save react-spinners
 
 const MainPage = () => {
+  const [loading, setLoading] = useState(false);
   const [limit, setLimit] = useState([]);
+
+  // Loading spinner
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
 
   useEffect(() => {
     (async () => {
@@ -27,11 +38,23 @@ const MainPage = () => {
 
   return (
     <div>
-      <Title title="Pizza Sharing" />
-      {renderLimitMeal}
-      <Link to={"/meals"}>
-        <button className={MainCSS.showAll}>Show All Meals</button>
-      </Link>
+      {loading ? (
+        <RingLoader
+          className={MealsCSS.spinner}
+          loading={loading}
+          color="#ffff"
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
+      ) : (
+        <div>
+          <Title title="Pizza Sharing" />
+          {renderLimitMeal}
+          <Link to={"/meals"}>
+            <button className={MainCSS.showAll}>Show All Meals</button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 };
