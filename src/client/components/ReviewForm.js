@@ -41,15 +41,13 @@ const ReviewForm = () => {
       .finally(alert(`You review on meal № ${mealId} was sent`));
   };
 
-  /* probably should be removed
   useEffect(() => {
     (async () => {
       await fetch(`api/meals/${mealId}`).then((response) => response.json());
       setIdOfMeal(mealId);
     })();
   }, []);
-*/
-  
+
   const showReviewForm = () => {
     setShowReviews(!showReviews);
   };
