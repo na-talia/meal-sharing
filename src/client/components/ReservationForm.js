@@ -42,15 +42,14 @@ const ReservationForm = () => {
       })
       .finally(alert(`You have reserved a meal № ${mealId}`));
   };
- // Probably not needed - will need to be checked
-  
-  /* useEffect(() => {
+
+  useEffect(() => {
     (async () => {
       await fetch(`api/meals/${mealId}`).then((response) => response.json());
       setIdOfMeal(mealId);
     })();
   }, []);
-*/
+
   const showReservationForm = () => {
     setShowReservation(!showReservation);
   };
