@@ -42,7 +42,6 @@ const ReservationForm = () => {
       })
       .finally(alert(`You have reserved a meal № ${mealId}`));
   };
-
   const showReservationForm = () => {
     setShowReservation(!showReservation);
   };
