@@ -31,7 +31,6 @@ body {
 .border,
 .list,
 .mealList,
-.detailsBlock,
 .container {
   -webkit-box-shadow: 2px 3px 73px 8px rgba(255, 255, 255, 0.62);
   -moz-box-shadow: 2px 3px 73px 8px rgba(255, 255, 255, 0.62);
@@ -144,11 +143,22 @@ li {
 .detailsBlock {
   display: flex;
   margin: 2rem;
+  background-color: #ffff;
+}
+
+.border {
+  height: 23rem;
+  margin: 2rem;
+}
+
+.border > li {
+  margin-top: 1rem;
 }
 
 .pizzaImgSmall {
   width: 40%;
   height: auto;
+  border: #ffff solid 2rem;
 }
 
 @media screen and (max-width: 1400px) {
