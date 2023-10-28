@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import ReviewCSS from "./UI/form.module.css";
 
@@ -40,13 +40,6 @@ const ReviewForm = () => {
       })
       .finally(alert(`You review on meal № ${mealId} was sent`));
   };
-
-  useEffect(() => {
-    (async () => {
-      await fetch(`api/meals/${mealId}`).then((response) => response.json());
-      setIdOfMeal(mealId);
-    })();
-  }, []);
 
   const showReviewForm = () => {
     setShowReviews(!showReviews);

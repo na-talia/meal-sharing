@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import ReservationCSS from "./UI/form.module.css";
 
@@ -42,13 +42,6 @@ const ReservationForm = () => {
       })
       .finally(alert(`You have reserved a meal № ${mealId}`));
   };
-
-  useEffect(() => {
-    (async () => {
-      await fetch(`api/meals/${mealId}`).then((response) => response.json());
-      setIdOfMeal(mealId);
-    })();
-  }, []);
 
   const showReservationForm = () => {
     setShowReservation(!showReservation);
