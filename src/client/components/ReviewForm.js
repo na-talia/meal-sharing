@@ -15,7 +15,7 @@ const ReviewForm = () => {
     e.preventDefault();
 
     const data = {
-      meal_id: idOfMeal,
+      meal_id: mealId,
       title,
       description,
       stars,
@@ -30,7 +30,6 @@ const ReviewForm = () => {
       body: JSON.stringify(data),
     })
       .then(() => {
-        console.log(data);
         setTitle("");
         setDescription("");
         setStars("");
@@ -55,11 +54,11 @@ const ReviewForm = () => {
           <h2>Write your review</h2>
           <label>Meal ID: </label>
           <span
-            value={idOfMeal}
-            onChange={() => setIdOfMeal(idOfMeal)}
+            value={mealId.value}
+            onChange={() => setIdOfMeal(mealId)}
             className={ReviewCSS.mealId}
           >
-            {idOfMeal}
+            {mealId}
           </span>
           <div>
             <label>Title: </label>

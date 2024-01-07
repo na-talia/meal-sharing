@@ -16,7 +16,7 @@ const ReservationForm = () => {
     e.preventDefault();
 
     const data = {
-      meal_id: idOfMeal,
+      meal_id: mealId,
       contact_name: contactName,
       contact_phonenumber: phoneNumber,
       contact_email: email,
@@ -57,11 +57,11 @@ const ReservationForm = () => {
           <h2>Make a reservation</h2>
           <label>Meal ID: </label>
           <span
-            value={idOfMeal}
-            onChange={() => setIdOfMeal(idOfMeal)}
+            value={mealId.value}
+            onChange={() => setIdOfMeal(mealId)}
             className={ReservationCSS.mealId}
           >
-            {idOfMeal}
+            {mealId}
           </span>
           <div>
             <span className={ReservationCSS.contactName}>
