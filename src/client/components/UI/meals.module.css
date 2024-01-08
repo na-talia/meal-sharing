@@ -145,6 +145,11 @@ li {
   margin: 2rem;
   background-color: #ffff;
 }
+.detailsBlock img {
+  width: 20rem;
+  height: 20rem;
+  margin-top: 6rem;
+}
 
 .border {
   height: 23rem;
@@ -161,7 +166,7 @@ li {
   border: #ffff solid 2rem;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1000px) {
   .limitList,
   .list {
     display: grid;

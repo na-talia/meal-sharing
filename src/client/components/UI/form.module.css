@@ -40,7 +40,7 @@ textarea {
 
 .contactName > input,
 .phone > input {
-  width: 33%;
+  width: 30%;
 }
 
 .email {
@@ -48,7 +48,7 @@ textarea {
 }
 
 .guests {
-  padding-left: 11rem;
+  padding-left: 12.5rem;
 }
 
 .guests > input {

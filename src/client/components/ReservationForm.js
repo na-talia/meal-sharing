@@ -96,7 +96,7 @@ const ReservationForm = () => {
               required
             />
             <span className={ReservationCSS.guests}>
-              <label>Number of guests: </label>
+              <label>№ of guests: </label>
               <input
                 type="number"
                 min={1}
