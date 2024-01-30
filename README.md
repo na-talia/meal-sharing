@@ -17,7 +17,6 @@ https://github.com/na-talia/meal-sharing/assets/86012464/5f7e2e23-041f-4b6e-a37f
 
 </div>
 
----
 
 <p align="center"> Website api for sharing meals together. Invite your best friends or your family for dinner!
     <br> 
