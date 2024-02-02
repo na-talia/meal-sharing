@@ -79,3 +79,4 @@ The api can now be found on `http://localhost:3000/api/` an example is `http://l
 ## ✍️ Authors <a name = "authors"></a>
 
 - [@benna100](https://github.com/benna100) - Idea & Initial work
+
